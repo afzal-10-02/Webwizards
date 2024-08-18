@@ -1,0 +1,982 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+/* General reset for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styling */
+header {
+    height: 70px;
+}
+
+/* Navigation bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 25px;
+}
+
+/* Logo styling */
+.logo h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: white;
+}
+
+/* List styling */
+.list ul {
+    display: flex;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.list ul li {
+    margin-left: 30px;
+    
+}
+
+.list ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.list ul li a:hover {
+    color: #007bff; 
+}
+
+
+
+/* Buttons styling */
+
+.login-signup-btn .button{
+    text-decoration: none;
+    color: black;
+}
+
+.button{
+    background-color: #fff; 
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-left: 10px;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    opacity: .9;
+    font-weight: bold;
+}
+
+.button:hover{
+    opacity: 1;
+}
+
+
+/* hero-section */
+.hero-section::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100vh;
+    background-image: url('images/image.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    z-index: -1;
+}
+
+.hero-section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    height: 85vh;
+}
+
+.hero-section h1{
+    padding-top: 7.3rem;
+    font-size: 5rem;
+    letter-spacing: 2px;
+    font-family: "Calistoga", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hero-section p{
+    text-align: center;
+    letter-spacing: 1.9px;
+    font-size: 0.9rem;
+    padding-top: 0.5rem;
+}
+
+.hero-section a{
+    text-decoration: none;
+    padding: 10px 25px;
+    margin-top: 2rem;
+    background-color: white;
+    border-radius: 5px;
+}
+.hero-section a:active{
+    text-decoration: underline;
+}
+
+
+
+
+/* Login & SignUp */
+/* Form Styling */
+form {
+    max-width: 400px;
+    margin: auto;
+    padding: 1em;
+    border-radius: 1em;
+}
+
+/* Form Fields Styling */
+form div + div {
+    margin-top: 1em;
+}
+
+label {
+    display: block;
+    margin-bottom: .5em;
+}
+
+input {
+    border: 1px solid #ccc;
+    padding: .5em;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: .3em;
+}
+.modal-dialog{
+    justify-content: center;
+}
+.modal-content{
+    width: 80%;
+    border-top-right-radius: 0;
+}
+
+.signup{
+    width: 90%;
+}
+
+.signup .modal-header .btn-close{
+    margin-left: 27em;
+}
+
+.modal-title{
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 0;
+    padding: 1.3rem 0;
+}
+.modal-header{
+    border-bottom: none;
+}
+.modal-header .btn-close{
+    position: absolute;
+    background-color: white;
+    margin-left: 23.8em;
+    margin-bottom: 1.5rem;
+    outline: none;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 0.8rem;
+    outline:none;
+    box-shadow: none;
+}
+
+/* Button Styling */
+button {
+    padding: 0.7em;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: .3em;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+    margin-top: 1em;
+}
+
+/* Anchor Tags Styling */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Span Styling */
+span {
+    display: block;
+    margin-top: 1em;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+
+/* about */
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* About Section Styling */
+.about-section {
+    padding: 70px 0;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.about-section h2 {
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.about-text {
+    max-width: 600px;
+    text-align: left;
+    padding: 20px;
+}
+
+.about-text p {
+    font-size: 1.2em;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+/* main-section css */
+
+.main-section {
+    padding: 40px 0;
+}
+
+.content-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature{
+    color: #fff;
+    border-radius: 10px;
+    width: 30%;
+    height: 350px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    text-align: left;
+    overflow: hidden;
+    cursor:default;
+}
+
+
+
+.feature .img img{
+ width: 100%;
+ height: 350px;
+}
+
+/* #personalized-plans{
+    background-image: url('images/personalized-plans.jpg'); 
+}
+
+#real-time-tracking {
+    background-image: url('images/real-time-tracking.jpg'); 
+}
+
+#community-support {
+    background-image: url('images/community-support1.jpg'); 
+} */
+
+h2 {
+    margin-bottom: 40px;
+    font-size: 4em;
+    letter-spacing: 2px;
+    color: #333;
+    font-family: "Calistoga", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.feature .txt {
+    padding: 0 1rem;
+    transition: transform 0.7s ease-in-out;
+}
+
+.feature:hover .txt {
+    transform: translateY(-120%); 
+} 
+.feature:hover .img img{
+   scale: 1.04;
+   transition: all 0.7s ease;
+filter: brightness(70%);
+}
+
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Blog section */
+
+.wellness-blog {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+    display: flex;
+    margin: 3rem 0;
+}
+
+/* .main-post{
+    display: flex;
+    text-align: left;
+    padding: 0 2rem;
+} */
+
+.blog-posts{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.blog-post{
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 10px;
+    width: calc(25% - 40px);
+    border-radius: 8px;
+    transition: transform 0.2s;
+    width: 45vw;
+    text-align: left;
+    display: flex;
+}
+/* .main-blog-content h2{
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+} */
+
+.blog-post img{
+    width: 120px;
+    height: 100px;
+}
+
+.blog-post a:hover h3{
+    color: rgb(129, 12, 12);
+}
+.blog-section{
+    padding-left: 1rem;
+}
+
+.blog-post h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+}
+
+.blog-post p {
+    font-size: 0.7em;
+    margin-bottom: 7px;
+}
+
+.blog-post a {
+    display: flex;
+    color: black;
+    text-decoration: none;
+}
+
+
+
+/* Goal Active */
+
+
+.wellness-goals {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2em;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.wellness-goals h1 {
+    font-family: "Calistoga", serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    font-size: 4rem;
+}
+
+.wellness-goals p {
+    font-size: 1em;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 3em;
+}
+.cards{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.cards a{
+    text-decoration: none;
+}
+
+.card {
+    border-radius: 10px;
+    padding: 1em;
+    margin-bottom: 1.5em;
+    position: relative;
+    overflow: hidden;
+    width: 300px;
+    height: 250px;
+}
+
+.cards a:hover{
+    scale: 1.02;
+    transition: all 0.5s;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: brightness(60%);
+    z-index: 1;
+}
+.card h2 {
+    position: relative;
+    z-index: 2;
+    font-size: 2rem;
+    color: white;
+    margin-top: 5em;
+    font-family: "Calistoga", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.card ul li {
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.card.weight-gain::before {
+    background: url('images/weight-gain.png') no-repeat center center/cover;
+}
+
+.card.weight-loss::before {
+    background: url('images/weight-loss.avif') no-repeat center center/cover;
+}
+
+.card.muscle-building::before {
+    background: url('images/muscle-build.webp') no-repeat center center/cover;
+}
+
+.card.stress-free::before {
+    background: url('images/stress-free.webp') no-repeat center center/cover;
+}
+
+/* Call to Action Section */
+.call-to-action {
+    background-color: #f9f9f9; /* Primary color */
+    color: black;
+    padding: 20px 15px;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.call-to-action h2 {
+    margin: 0 0 20px;
+    font-size: 3rem;
+}
+
+.call-to-action p {
+    font-size: 1.3rem;
+    margin: 0 0 30px;
+    line-height: 1.6;
+}
+
+.call-to-action a {
+    background-color: #0056b3; /* Darker shade of primary color for button */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.call-to-action a:hover {
+    background-color: #004085; /* Even darker shade for hover effect */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.call-to-action a:active {
+    background-color: #003070; /* Darkest shade for active effect */
+    transform: translateY(0); /* Remove lift effect */
+}
+
+
+/* Slider css */
+
+.customer-reviews-carousel {
+    text-align: center;
+    margin-bottom: 7.5rem;
+}
+
+.customer-reviews-carousel h2 {
+    font-size: 2.5em;
+}
+
+#carouselExampleIndicators .carousel-indicators button{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: gray;
+}
+.carousel-inner{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.main-slider-box{
+    border: 1px solid;
+}
+
+.carousel-item {
+    padding: 20px;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+    height: 350px;
+    border-radius: 8px;
+}
+
+.review img{
+    width: 140px;
+    height: 140px;
+    aspect-ratio: 2/3;
+    object-fit: contain;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+
+}
+
+.review p {
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.review h4 {
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+}
+
+.review p {
+    color: #666;
+}
+
+
+
+.rating-star i{
+    font-size: larger;
+    color: yellow;
+}
+
+.carousel-control-prev-icon , .carousel-control-next-icon{
+    margin-top: -2rem;
+}
+
+.carousel-control-next-icon{
+    margin-right: 1.7rem;
+}
+
+.carousel-control-prev span i{
+    color: black;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    opacity: .9;
+    background-color: whitesmoke;
+    border-radius: 50%;
+}
+
+.carousel-control-next span i{
+    color: black;
+    font-size: 1.5rem;
+    padding: 10px 15px;
+    opacity: .9;
+    background-color: whitesmoke;
+    border-radius: 50%;
+}
+
+/* FAQ section */
+
+
+.explore {
+    width: 100%;
+    background-color: rgb(252, 252, 252);
+    padding-bottom: 6rem;
+
+}
+
+.explore .para {
+    font-size: 35px;
+     text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 0.7rem;
+    font-family: "Calistoga", serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1.5px;
+}
+
+.e-box {
+    width: 50%;
+    border: 0.5px solid rgb(228, 223, 223);
+    border-radius: 5px;
+    margin: 30px auto;
+    background-color: white;
+}
+
+.e-box p {
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 15px 25px;
+    cursor: pointer;
+    color: rgb(43, 41, 41);
+    margin: 0;
+}
+
+.p-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    transition: transform 0.3s ease; 
+    margin-right: 2rem;
+}
+
+.boxs {
+    display: none;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(150, 146, 146);
+    transition: all 0.3s ease; 
+    height: auto;
+    overflow: hidden;
+}
+.boxs p{
+    font-size: 1rem;
+    color: rgba(44, 39, 39, 0.6);
+    letter-spacing: 1px;
+}
+
+.open {
+    display: block;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+   
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 10px;
+  }
+  
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-section {
+    width: auto;
+  }
+  /* .message-send-section{
+    min-width: 250px;
+  } */
+  
+  .footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-section ul li {
+    margin: 5px 0;
+    text-align: left;
+  }
+  
+  .footer-section ul li a {
+    color: rgb(150, 146, 146);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section ul li a:hover {
+    color: rgb(252, 252, 252);
+  }
+  
+  
+  .message-send-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .message-send-section textarea {
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  form{
+    padding: 0;
+  }
+  
+  .message-send-section textarea {
+    height: 150px;
+    resize: none;
+    outline: none;
+  }
+  
+  .message-send-section button {
+    padding: 10px;
+    background-color: rgb(150, 146, 146);
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin-top: 0;
+  }
+  
+  .message-send-section button:hover {
+    background-color: white;
+  }
+  
+  .copyright {
+    margin-top: 20px;
+    font-size: 12px;
+    color: rgb(150, 146, 146);
+margin-bottom: 0;
+  }
+  
+
+  /* media query */
+
+  /* navbar*/
+
+@media (max-width: 768px) {
+    .logo h2 {
+        font-size: 20px;
+    }
+    
+    .list ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .list ul li {
+        margin: 10px 0;
+    }
+
+    .login-signup-btn .button {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+    
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+}
+
+
+/* hero section */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 3rem;
+        padding-top: 4rem;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+        padding-top: 0.5rem;
+    }
+
+    .hero-section a {
+        font-size: 0.9rem;
+        padding: 8px 20px;
+    }
+}
+
+  /* features section */
+
+  @media (max-width: 768px) {
+    .feature {
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .feature .img img {
+        height: auto;
+    }
+}
+
+/* blog section */
+
+@media (max-width: 768px) {
+    .blog-post {
+        width: calc(100% - 30px);
+    }
+
+    .blog-post img {
+        width: 100px;
+        height: 80px;
+    }
+}
+
+/* footer section */
+
+@media (max-width: 768px) {
+    .footer-top {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+/* form */
+
+@media (max-width: 768px) {
+    form {
+        padding: 1em;
+        width: 90%;
+    }
+
+    input, textarea {
+        font-size: 0.9em;
+    }
+}
+
+/* call of action */
+
+@media (max-width: 768px) {
+    .call-to-action h2 {
+        font-size: 2.5rem;
+    }
+
+    .call-to-action p {
+        font-size: 1rem;
+    }
+
+    .call-to-action a {
+        font-size: 0.9rem;
+        padding: 12px 25px;
+    }
+}

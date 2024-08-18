@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wellness Tracking</title>
+    <!--Icon CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Bootstrap css CDN links-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--Custom css link-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="continer-fluid">
+
+        <header>
+            <nav>
+                <div class="logo">
+                    <h2>Health is Wealth</h2>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li><a href="#About" rel="noopener noreferrer">About</a></li>
+                        <li><a href="#Plans" rel="noopener noreferrer">Plans</a></li>
+                        <li><a href="#Blogs" rel="noopener noreferrer">Blogs</a></li>
+                        <li><a href="" rel="noopener noreferrer">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="login-signup-btn">
+                    <a class="button" data-bs-toggle="modal" href="#exampleModalToggle">Login</a>
+                    <a class="button" data-bs-toggle="modal" href="#exampleModalToggle2">Signup</a>
+                </div>
+                <!--Login Modal-->
+                <div class="modal fade" id="exampleModalToggle" aria-hidden="true"
+                    aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h2 class="modal-title" id="exampleModalToggleLabel">Login</h2>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="../Authentication/login.php" method="post">
+                                    <div>
+                                        <label for="username">Username:</label>
+                                        <input type="text" id="username" name="username" required>
+                                    </div>
+                                    <div>
+                                        <label for="password">Password:</label>
+                                        <input type="password" id="password" name="password" required>
+                                    </div>
+                                    <div>
+                                        <a href="#">Forgot Password?</a>
+                                        <br>
+                                        <button type="submit">Login</button>
+                                    </div>
+                                    <span>Don't have an account? <a href="#" data-bs-target="#exampleModalToggle2"
+                                            data-bs-toggle="modal" data-bs-dismiss="modal">Signup</a></span>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="exampleModalToggle2" aria-hidden="true"
+                    aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content signup">
+                            <div class="modal-header">
+                                <h2 class="modal-title" id="exampleModalToggleLabel2">Sign Up</h2>
+                                <button type="button" class="btn-close signup-button" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="../Authentication/signup.php" method="post" id="registrationForm">
+                                    <div>
+                                        <label for="full_name">Full Name:</label>
+                                        <input type="text" id="full_name" name="full_name" required>
+                                        <div class="error" id="nameError"></div>
+                                    </div>
+                                    <div>
+                                        <label for="email">Email:</label>
+                                        <input type="email" id="email" name="email" required>
+                                        <div class="error" id="emailError"></div>
+                                    </div>
+                                    <div>
+                                        <label for="password">Password:</label>
+                                        <input type="password" id="password" name="password" required>
+                                        <div class="error" id="passwordError"></div>
+                                    </div>
+                                    <div>
+                                        <label for="confirm_password">Confirm Password:</label>
+                                        <input type="password" id="confirm_password" name="confirm_password" required>
+                                        <div class="error" id="confirmPasswordError"></div>
+                                    </div>
+                                    <div>
+                                        <button type="submit" id="submit_button">Submit</button>
+                                    </div>
+                                    <span>Already have an account? <a href="#" data-bs-target="#exampleModalToggle"
+                                            data-bs-toggle="modal" data-bs-dismiss="modal">Login</a></span>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+            </nav>
+        </header>
+
+        <section>
+            <div class="hero-section">
+                <h1>Wellness Revolution</h1>
+                <p>Achieve your fitness goals with our cutting-edge exercise tracking features.
+                    <br>
+                    Stay motivated and monitor your progress effortlessly.
+                    <br>
+                    Join our community and transform your life today!
+                </p>
+                <a href="#">Get's Start</a>
+            </div>
+        </section>
+        <!--About section-->
+
+        <section class="about-section" id="About">
+            <div class="content-container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>About Us</h2>
+                        <p>We are dedicated to helping you achieve your health and wellness goals through personalized
+                            plans, advanced tracking, and a supportive community. Our mission is to empower you to live
+                            a healthier and happier life.</p>
+                        <p>Our team of experts is committed to providing you with the best tools and resources to track
+                            your progress and stay motivated. Join us and be a part of a community that values health
+                            and wellness as much as you do.</p>
+                        <p>We offer a variety of services, including personalized workout plans, nutritional guidance,
+                            mental wellness support, and more. Our advanced tracking features help you monitor your
+                            progress in real-time, ensuring you stay on track to achieve your goals.</p>
+                    </div>
+                    <img src="images/about-image.jpg" alt="About Us">
+                </div>
+
+            </div>
+    </section>
+
+
+    <section class="main-section">
+        <div class="content-container">
+            <h2>Why Choose Us?</h2>
+            <div class="features">
+
+                <div class="feature" id="real-time-tracking">
+                    <div class="img">
+                        <img src="images/real-time-tracking.jpg" alt="">
+                    </div>
+                    <div class="txt">
+                        <h3>Real-time Tracking</h3>
+                        <p>Monitor your progress and stay on track with our advanced tracking features.</p>
+                    </div>
+                </div>
+                <div class="feature" id="personalized-plans">
+                    <div class="img">
+                        <img src="images/personalized-plans.jpg" alt="">
+                    </div>
+                    <div class="txt">
+                        <h3>Personalized Plans</h3>
+                        <p>Get a workout plan tailored to your needs and goals.</p>
+                    </div>
+                </div>
+                <div class="feature" id="community-support">
+                    <div class="img">
+                        <img src="images/community-support1.jpg" alt="">
+                    </div>
+                    <div class="txt">
+                        <h3>Community Support</h3>
+                        <p>Join a community of like-minded individuals for motivation and support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Blog Section-->
+
+    <section class="wellness-blog" id="Blogs">
+        <div class="blog-posts">
+            <div class="blog-post">
+                <a href="#">
+                    <img src="images/weight-gain-blog-img.jpg" alt="">
+                    <div class="blog-section">
+
+                        <h3>5 Tips for Healthy Weight Gain</h3>
+                        <p>Gaining weight healthily can be as challenging as losing it. Whether you're building muscle,
+                            recovering from illness, or aiming for a healthier weight.</p>
+
+                    </div>
+                </a>
+            </div>
+            <div class="blog-post">
+                <a href="#">
+                    <img src="images/weight-loss-blog-img.jpg" alt="">
+                    <div class="blog-section">
+
+                        <h3>Effective Weight Loss Strategies</h3>
+                        <p>
+                            Losing weight can be challenging, but with the right strategies, it's manageable and
+                            sustainable. These effective tips will help you improve health, boost energy, and gain
+                            confidence.</p>
+
+                    </div>
+                </a>
+            </div>
+            <div class="blog-post">
+                <a href="#">
+                    <img src="images/muscle-build-blog-img.jpg" alt="">
+                    <div class="blog-section">
+
+                        <h3>Building Muscle: A Beginner's Guide</h3>
+                        <p>Building muscle can seem daunting, especially for beginners. However, with the right approach
+                            and dedication, anyone can achieve their muscle-building goals. This guide provides
+                            essential tips and strategies to help you start your journey towards a stronger, healthier
+                            body.</p>
+
+                    </div>
+                </a>
+            </div>
+            <div class="blog-post">
+                <a href="">
+                    <img src="images/stress-blog-img.webp" alt="">
+                    <div class="blog-section">
+
+                        <h3>Stress Management Techniques</h3>
+                        <p>Stress is a common part of life, but chronic stress can have serious impacts on your physical
+                            and mental health. Managing stress effectively is crucial for maintaining overall
+                            well-being. This guide provides a range of stress management techniques to help you navigate
+                            life's challenges more smoothly.</p>
+
+                    </div>
+                </a>
+            </div>
+            <div class="blog-post">
+                <a href="">
+                    <img src="images/mind-fullness-blog-img.jpg" alt="">
+                    <div class="blog-section">
+
+                        <h3>Mindfulness Practices for Daily Life</h3>
+                        <p>Mindfulness is a powerful tool for reducing stress and enhancing overall well-being. This
+                            blog will explore various mindfulness practices that can be easily incorporated into daily
+                            life, helping readers stay present and centered amidst the hustle and bustle.</p>
+
+                    </div>
+                </a>
+            </div>
+            <div class="blog-post">
+                <a href="">
+                    <img src="images/self-care-blog-img.png" alt="">
+                    <div class="blog-section">
+
+                        <h3>The Importance of Self-Care for Mental Health</h3>
+                        <p>Self-care is essential for maintaining mental health and managing stress. This blog will
+                            discuss the importance of self-care, offering practical tips and strategies to help readers
+                            prioritize their well-being.</p>
+
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="wellness-goals" id="Plans">
+        <h1>Your Wellness Goals</h1>
+        <p>We provide comprehensive resources and personalized plans to help you achieve your wellness goals. Whether
+            you're looking to gain weight, lose weight, build muscle, or manage stress, we've got you covered.</p>
+        <div class="cards">
+            <a href="" target="_blank" id="exe1">
+                <div class="card weight-gain">
+
+                    <h2>Weight Gain</h2>
+
+                </div>
+            </a>
+            <a href="" target="_blank" id="exe2">
+                <div class="card weight-loss">
+
+                    <h2>Weight Loss</h2>
+
+
+                </div>
+            </a>
+            <a href="" target="_blank" id="exe3">
+
+                <div class="card muscle-building">
+
+                    <h2>Muscle Building</h2>
+
+
+                </div>
+            </a>
+            <a href="" target="_blank" id="exe4">
+
+                <div class="card stress-free">
+                    <h2>Stress-Free</h2>
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Call to Action Section -->
+    <section class="call-to-action">
+        <div class="container">
+            <h2>Join Us Today!</h2>
+
+            <p>Take the first step towards a healthier and happier you. Join our community and start your wellness
+                journey today.</p>
+            <a href="#exampleModalToggle2" data-bs-toggle="modal" class="">Sign Up Now</a>
+        </div>
+    </section>
+
+    <!--Reviews Section-->
+
+    <section class="customer-reviews-carousel">
+        <h2>What Our Customers Say</h2>
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner main-slider-box">
+                <div class="carousel-item active">
+                    <div class="review">
+                        <img src="images/review-img1.webp" alt="">
+                        <p>"The personalized meal plans and workouts have completely transformed my life. 
+                            I've lost weight, gained muscle, and my overall health has significantly improved. 
+                            The guidance and support provided are exceptional. 
+                            I feel healthier and more energetic than ever before. 
+                            Highly recommend this program to anyone looking to make a positive change."</p>
+                        <h4>John Doe</h4>
+                        <div class="rating-star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+
+                        </div>
+                        
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="review">
+                        <img src="images/review-img2.webp" alt="">
+                        <p>"The stress management techniques offered here are incredible. 
+                            I've found a new sense of balance and peace. 
+                            The practical exercises and strategies are easy to incorporate into daily life. 
+                            I've noticed a significant reduction in my stress levels. 
+                            I highly recommend these techniques to anyone looking for a more peaceful and balanced life."</p>
+                        <h4>Jane Smith</h4>
+                        <div class="rating-star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="review">
+                        <img src="images/review-img3.webp" alt="">
+                        <p>"The muscle-building program is top-notch. 
+                            I've seen noticeable gains and improvements in my strength. 
+                            The structured workouts and expert guidance have made a huge difference. 
+                            My muscle definition and overall fitness have significantly improved. 
+                            I highly recommend this program to anyone serious about building muscle."</p>
+                        <h4>Michael Brown</h4>
+                        <div class="rating-star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+
+                           
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="review">
+                        <img src="images/review-img4.webp" alt="">
+                        <p>"The stress management techniques have been a game-changer for me. 
+                            I feel more relaxed and focused throughout the day. 
+                            The practical strategies are easy to integrate into my routine. 
+                            I've noticed a significant improvement in my overall well-being. 
+                            This program is a must-try for anyone looking to manage stress effectively."</p>
+                        <h4>David Lee</h4>
+                        <div class="rating-star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="review">
+                        <img src="images/review-img5.webp" alt="">
+                        <p>"Joining this fitness program was the best decision I've made. 
+                            The personalized workouts and nutritional advice have helped me achieve my goals faster. 
+                            I've seen remarkable improvements in my strength and endurance. 
+                            The support and guidance provided are outstanding."</p>
+                        <h4>Emily Smith</h4>
+
+                        <div class="rating-star">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"><i
+                        class="fa-solid fa-chevron-left"></i></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"> <i
+                        class="fa-solid fa-chevron-right"></i></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+
+    <!-- FAQ Section -->
+    <div class="explore">
+        <p class="para">Frequently Asked Questions</p>
+        <div class="e-box">
+            <div class="p-box">
+                <p id="click1">What is the Wellness Tracking Website?</p> <i
+                    class="fa-sharp fa-solid fa-angle-down icon" id="icon1"></i>
+            </div>
+            <div class="boxs open" id="boxs1">
+                <p> Our Wellness Tracking Website offers personalized fitness plans, advanced tracking features,
+                    and a supportive community to help you achieve your health and wellness goals.</p>
+            </div>
+        </div>
+        <div class="e-box">
+            <div class="p-box">
+                <p id="click2">How do I sign up?</p> <i class="fa-sharp fa-solid fa-angle-down icon" id="icon2"></i>
+            </div>
+            <div class="boxs open" id="boxs2">
+                <p>You can sign up by clicking the "Sign Up Now" button on our website and filling out the
+                    registration form. It’s quick and easy!</p>
+            </div>
+        </div>
+        <div class="e-box">
+            <div class="p-box">
+                <p id="click3">Is there a membership fee?</p> <i class="fa-sharp fa-solid fa-angle-down icon"
+                    id="icon3"></i>
+            </div>
+            <div class="boxs open" id="boxs3">
+                <p>We offer both free and premium membership plans. You can choose the plan that best suits
+                    your needs.</p>
+            </div>
+        </div>
+        <div class="e-box">
+            <div class="p-box">
+                <p id="click4">How can I track my progress?</p> <i class="fa-sharp fa-solid fa-angle-down icon"
+                    id="icon4"></i>
+            </div>
+            <div class="boxs open" id="boxs4">
+                <p>Our platform offers advanced tracking features that allow you to monitor your workouts,
+                    nutrition, and overall progress in real-time.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="message-send-section">
+                    <form action="#">
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+                <div class="footer-section">
+                    <h4>Latest News</h4>
+                    <ul>
+                        <li><a href="#">New Features Released</a></li>
+                        <li><a href="#">Upcoming Wellness Events</a></li>
+                        <li><a href="#">Tips for Healthy Living</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Partners</h4>
+                    <ul>
+                        <li><a href="#">Health Corp</a></li>
+                        <li><a href="#">Wellness World</a></li>
+                        <li><a href="#">Fitness First</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Information</h4>
+                    <ul>
+                        <li><a href="mailto:support@wellnessapp.com">support@wellnessapp.com</a></li>
+                        <li><a href="tel:+1234567890">+91 89303 78322</a></li>
+                        <li><a href="#">Mg Marg Gangtok Sikkim-737101</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                        <li><a href="#"><i class="fa-brands fa-twitter"></i> Twitter</a></li>
+                        <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                        <li><a href="#"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2024 Wellness App. All rights reserved.</p>
+    </footer>
+
+    
+     <!--Bootstrap js CDN links-->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+     crossorigin="anonymous"></script>
+     
+    <!--Custom js link-->
+    <script src="script.js"></script>
+    </div>
+</body>
+
+</html>
